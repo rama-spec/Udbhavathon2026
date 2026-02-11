@@ -2,7 +2,709 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8"><!DOCTYPE html>
+    <meta charset="UTF-8"><!DOCTYPE html><!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="UDBHAVATHON 2026 - A 10 Hour State Level Hackathon at Bhavan's New Science College">
+    <title>UDBHAVATHON 2026 | Code the Future</title>
+
+    <!-- Design Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Internal:wght@100&family=Inter:wght@300;400;500;600&family=Orbitron:wght@400;500;700;900&family=Sora:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Fixed Starfield Background (Global, Continuous) -->
+    <div class="space-background">
+        <canvas id="starfield"></canvas>
+    </div>
+
+    <!-- Main Hero Section -->
+    <main class="hero-section">
+        <!-- Planet (Scrolls with Hero) -->
+        <div class="planet-container">
+            <div class="planet-halo"></div>
+            <div class="planet-body">
+                <div class="planet-surface"></div>
+                <div class="planet-clouds"></div>
+                <div class="planet-shadow"></div>
+                <div class="planet-rim"></div>
+                <div class="planet-atmosphere-glow"></div>
+            </div>
+        </div>
+        <div class="container">
+
+            <!-- Left Content: Text -->
+            <div class="hero-content">
+                <div class="institution-badge fade-in-up">
+                    <span class="badge-glow"></span>
+                    BHAVAN’S NEW SCIENCE COLLEGE
+                </div>
+
+                <h1 class="hero-title fade-in-up delay-1">
+                    UDBHAVATHON<br>
+                    <span class="highlight-year">2026</span>
+                </h1>
+
+                <h2 class="hero-subtitle fade-in-up delay-2">
+                    Code the Future
+                </h2>
+
+                <p class="hero-description fade-in-up delay-3">
+                    10 Hour State Level Hackathon at Bhavan's New Science College
+                </p>
+
+                <div class="hero-actions fade-in-up delay-4">
+                    <!-- Countdown Timer -->
+                    <div class="countdown-container" id="countdownContainer">
+                        <div class="countdown-box" data-index="0">
+                            <div class="countdown-glow"></div>
+                            <span class="countdown-value" id="countdown-days">00</span>
+                            <span class="countdown-label">DAYS</span>
+                        </div>
+                        <div class="countdown-box" data-index="1">
+                            <div class="countdown-glow"></div>
+                            <span class="countdown-value" id="countdown-hours">00</span>
+                            <span class="countdown-label">HOURS</span>
+                        </div>
+                        <div class="countdown-box" data-index="2">
+                            <div class="countdown-glow"></div>
+                            <span class="countdown-value" id="countdown-min">00</span>
+                            <span class="countdown-label">MIN</span>
+                        </div>
+                        <div class="countdown-box" data-index="3">
+                            <div class="countdown-glow"></div>
+                            <span class="countdown-value" id="countdown-sec">00</span>
+                            <span class="countdown-label">SEC</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Content: Glass Card -->
+            <div class="hero-visual">
+                <div class="card-wrapper">
+                    <div class="glass-card" id="glassCard">
+                        <div class="card-glow"></div>
+                        <div class="card-border"></div>
+
+                        <div class="card-header">
+                            <span class="card-label">EVENT BRIEF</span>
+                            <div class="live-indicator">
+                                <span class="dot"></span> LIVE
+                            </div>
+                        </div>
+
+                        <div class="card-body">
+                            <div class="info-row">
+                                <span class="info-label">DATE</span>
+                                <span class="info-value">Feb 25–26, 2026</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">TRACKS</span>
+                                <span class="info-value">8 Hackathon Tracks</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">FEE</span>
+                                <span class="info-value">₹200 <span class="sub-text">/ participant</span></span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">TEAM</span>
+                                <span class="info-value">2–6 Members</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">MODE</span>
+                                <span class="info-value">On-campus</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">SLOTS</span>
+                                <span class="info-value">0/200</span>
+                            </div>
+                            <p style="text-align: center; font-size: 0.85em; color: #ffeb3b; margin-top: 15px; font-weight: bold;">Hurry Up! Limited 200 slots available</p>
+                        </div>
+
+                        <div class="card-footer">
+                            <a href="https://forms.gle/icQ7Td69DXJThNgn7" target="_blank" class="cyber-button">
+                                <span class="btn-text">REGISTER NOW</span>
+                                <span class="btn-glitch"></span>
+                                <span class="btn-glow"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ==========================================
+         HACKATHON TRACKS SECTION (2nd)
+         ========================================== -->
+    <section id="tracks" class="tracks-section">
+        <div class="tracks-grid-bg"></div>
+        <div class="container">
+
+            <!-- Section Header -->
+            <div class="tracks-header">
+                <span class="tracks-label scroll-reveal">MISSION DOMAINS</span>
+                <h2 class="tracks-heading scroll-reveal delay-1">Hackathon Tracks</h2>
+                <p class="tracks-subtitle scroll-reveal delay-2">Choose your challenge domain</p>
+            </div>
+
+            <!-- Tracks Grid: 4 + 3 centered -->
+            <div class="tracks-grid">
+
+                <!-- Track 1: Artificial Intelligence -->
+                <div class="track-tile tilt-card scroll-reveal" style="--stagger: 1">
+                    <div class="tile-scanlines"></div>
+                    <div class="tile-glow"></div>
+                    <div class="tile-sweep"></div>
+                    <div class="track-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="6" cy="6" r="2" />
+                            <circle cx="18" cy="6" r="2" />
+                            <circle cx="6" cy="18" r="2" />
+                            <circle cx="18" cy="18" r="2" />
+                            <circle cx="12" cy="12" r="3" />
+                            <path d="M7.5 7.5l3 3m3 3l3 3M16.5 7.5l-3 3m-3 3l-3 3" />
+                        </svg>
+                    </div>
+                    <h3 class="track-title">Artificial Intelligence</h3>
+                    <p class="track-desc">Develop intelligent systems and advanced machine learning models</p>
+                </div>
+
+                <!-- Track 2: Fin Tech & Block Chain -->
+                <div class="track-tile tilt-card scroll-reveal" style="--stagger: 2">
+                    <div class="tile-scanlines"></div>
+                    <div class="tile-glow"></div>
+                    <div class="tile-sweep"></div>
+                    <div class="track-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect>
+                            <path d="M12 7V2"></path>
+                            <path d="M5 12h14"></path>
+                            <path d="M12 18V7"></path>
+                            <path d="M16 12V7"></path>
+                            <path d="M8 12V7"></path>
+                        </svg>
+                    </div>
+                    <h3 class="track-title">Fin Tech & Block Chain</h3>
+                    <p class="track-desc">Explore financial technology and distributed ledger solutions</p>
+                </div>
+
+                <!-- Track 3: Health Tech -->
+                <div class="track-tile tilt-card scroll-reveal" style="--stagger: 3">
+                    <div class="tile-scanlines"></div>
+                    <div class="tile-glow"></div>
+                    <div class="tile-sweep"></div>
+                    <div class="track-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                    </div>
+                    <h3 class="track-title">Health Tech</h3>
+                    <p class="track-desc">Innovate in healthcare with technology-driven solutions</p>
+                </div>
+
+                <!-- Track 4: Robotics -->
+                <div class="track-tile tilt-card scroll-reveal" style="--stagger: 4">
+                    <div class="tile-scanlines"></div>
+                    <div class="tile-glow"></div>
+                    <div class="tile-sweep"></div>
+                    <div class="track-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="3" y="11" width="18" height="10" rx="2" />
+                            <circle cx="8.5" cy="16" r="1.5" />
+                            <circle cx="15.5" cy="16" r="1.5" />
+                            <path d="M12 11V7" />
+                            <circle cx="12" cy="5" r="2" />
+                        </svg>
+                    </div>
+                    <h3 class="track-title">Robotics</h3>
+                    <p class="track-desc">Design machines that bridge the physical and digital worlds</p>
+                </div>
+
+                <!-- Track 5: Cyber Security & Threat Prevention -->
+                <div class="track-tile tilt-card scroll-reveal" style="--stagger: 5">
+                    <div class="tile-scanlines"></div>
+                    <div class="tile-glow"></div>
+                    <div class="tile-sweep"></div>
+                    <div class="track-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                            <path d="M9 12l2 2 4-4" />
+                        </svg>
+                    </div>
+                    <h3 class="track-title">Cyber Security & Threat Prevention</h3>
+                    <p class="track-desc">Protect systems from digital threats and vulnerabilities</p>
+                </div>
+
+                <!-- Track 6: Agentic AI -->
+                <div class="track-tile tilt-card scroll-reveal" style="--stagger: 6">
+                    <div class="tile-scanlines"></div>
+                    <div class="tile-glow"></div>
+                    <div class="tile-sweep"></div>
+                    <div class="track-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="3" />
+                            <path d="M12 2v4m0 12v4M2 12h4m12 0h4" />
+                            <circle cx="12" cy="12" r="9" />
+                            <path d="M12 9v3l2 1" />
+                        </svg>
+                    </div>
+                    <h3 class="track-title">Agentic AI</h3>
+                    <p class="track-desc">Build autonomous intelligent agents</p>
+                </div>
+
+                <!-- Track 7: IoT -->
+                <div class="track-tile tilt-card scroll-reveal" style="--stagger: 7">
+                    <div class="tile-scanlines"></div>
+                    <div class="tile-glow"></div>
+                    <div class="tile-sweep"></div>
+                    <div class="track-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="4" y="4" width="6" height="6" rx="1" />
+                            <rect x="14" y="4" width="6" height="6" rx="1" />
+                            <rect x="4" y="14" width="6" height="6" rx="1" />
+                            <rect x="14" y="14" width="6" height="6" rx="1" />
+                            <path d="M10 7h4M7 10v4M17 10v4M10 17h4" />
+                        </svg>
+                    </div>
+                    <h3 class="track-title">IoT</h3>
+                    <p class="track-desc">Innovate with interconnected devices and smart environments</p>
+                </div>
+
+                <!-- Track 8: Open Innovation -->
+                <div class="track-tile tilt-card scroll-reveal" style="--stagger: 8">
+                    <div class="tile-scanlines"></div>
+                    <div class="tile-glow"></div>
+                    <div class="tile-sweep"></div>
+                    <div class="track-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M9 18h6" />
+                            <path d="M10 22h4" />
+                            <path d="M12 2a7 7 0 0 1 4 12.9V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.1A7 7 0 0 1 12 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="track-title">Open Innovation</h3>
+                    <p class="track-desc">Solve undefined problems with creativity</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SPONSOR HIGHLIGHT SECTION
+         ========================================== -->
+    <section id="sponsor-highlight" class="sponsor-section" style="padding: 60px 0; text-align: center;">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="sponsor-header scroll-reveal">
+                <span class="sponsor-label" style="color: #00e5ff; font-family: 'Sora', sans-serif; font-weight: 600; font-size: 1.1em; letter-spacing: 1.5px; text-transform: uppercase; display: block; margin-bottom: 10px;">MISSION PARTNER</span>
+                <img src="lovable_logo.png" alt="Lovable Logo" style="max-height: 80px; margin-top: 15px;">
+            </div>
+
+            <!-- Sponsor Details -->
+            <div class="sponsor-details scroll-reveal delay-1" style="display: flex; align-items: center; justify-content: center; gap: 40px; margin-top: 30px; flex-wrap: wrap;">
+                <h2 class="sponsor-heading" style="color: #ffffff; font-family: 'Orbitron', sans-serif; font-size: 2.5em; margin: 10px 0;">Lovable</h2>
+                <div class="sponsor-text" style="max-width: 450px; text-align: left;">
+                    <p style="color: #cdd4e2; font-family: 'Inter', sans-serif; font-size: 1.1em; line-height: 1.6;">
+                        Every participant at UDBHAVATHON 2026 will receive
+                        <span style="color: #00e5ff; font-weight: bold; text-shadow: 0 0 8px rgba(0, 229, 255, 0.5);">$10 (~₹900)</span>
+                        in credits from our mission partner, Lovable.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         EVALUATION PARTNERS SECTION
+         ========================================== -->
+    <section id="evaluation-partners" class="evaluation-section" style="padding: 60px 0; text-align: center;">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="evaluation-header scroll-reveal">
+                <span class="evaluation-label" style="color: #00e5ff; font-family: 'Sora', sans-serif; font-weight: 600; font-size: 1.1em; letter-spacing: 1.5px; text-transform: uppercase;">Evaluation Partners</span>
+                <p style="color: #cdd4e2; font-family: 'Inter', sans-serif; font-size: 1.1em; line-height: 1.6; max-width: 700px; margin: 15px auto 30px auto;">
+                    All solutions developed will be evaluated by direct employees of Google and Microsoft.
+                </p>
+            </div>
+
+            <!-- Partner Logos -->
+            <div class="partner-logos scroll-reveal delay-1" style="display: flex; align-items: center; justify-content: center; gap: 60px; flex-wrap: wrap;">
+                <img src="google_logo.png" alt="Google Logo" style="max-height: 120px;">
+                <img src="microsoft_logo.png" alt="Microsoft Logo" style="max-height: 80px;">
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         PLATFORM PARTNER SECTION
+         ========================================== -->
+    <section id="platform-partner" class="partner-section" style="padding: 60px 0; text-align: center;">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="partner-header scroll-reveal">
+                <span class="partner-label" style="color: #00e5ff; font-family: 'Sora', sans-serif; font-weight: 600; font-size: 1.1em; letter-spacing: 1.5px; text-transform: uppercase; display: block; margin-bottom: 10px;">Platform Partner</span>
+                <img src="devnovate_logo.png" alt="Devnovate Logo" style="max-height: 80px; margin-top: 15px;">
+            </div>
+
+            <!-- Partner Details -->
+            <div class="partner-details scroll-reveal delay-1" style="display: flex; align-items: center; justify-content: center; gap: 40px; margin-top: 30px; flex-wrap: wrap;">
+                <h2 class="partner-heading" style="color: #ffffff; font-family: 'Orbitron', sans-serif; font-size: 2.5em; margin: 10px 0;">Devnovate</h2>
+                <div class="partner-text" style="max-width: 450px; text-align: left;">
+                    <p style="color: #cdd4e2; font-family: 'Inter', sans-serif; font-size: 1.1em; line-height: 1.6;">
+                        Devnovate is our platform partner, helping us reach a wide range of students for this event. We Encourage you to visit devnovate.co and regester in There too.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         ORBIT PATH TIMELINE SECTION
+         ========================================== -->
+    <section id="timeline" class="timeline-section">
+        <div class="timeline-container">
+
+            <!-- Section Header -->
+            <div class="timeline-header">
+                <span class="timeline-label scroll-reveal">MISSION SEQUENCE</span>
+                <h2 class="timeline-heading scroll-reveal delay-1">Event Timeline</h2>
+                <p class="timeline-subtitle scroll-reveal delay-2">Mission execution schedule</p>
+                <div class="heading-glow-bar"></div>
+            </div>
+
+            <!-- Orbit Path Container -->
+            <div class="orbit-container">
+                <!-- SVG Orbit Path -->
+                <svg class="orbit-svg" viewBox="0 0 1400 500" preserveAspectRatio="xMidYMid meet">
+                    <!-- Glow Filter -->
+                    <defs>
+                        <filter id="orbitGlow" x="-50%" y="-50%" width="200%" height="200%">
+                            <feGaussianBlur stdDeviation="4" result="blur" />
+                            <feMerge>
+                                <feMergeNode in="blur" />
+                                <feMergeNode in="SourceGraphic" />
+                            </feMerge>
+                        </filter>
+                        <filter id="nodeGlow" x="-100%" y="-100%" width="300%" height="300%">
+                            <feGaussianBlur stdDeviation="6" result="blur" />
+                            <feMerge>
+                                <feMergeNode in="blur" />
+                                <feMergeNode in="SourceGraphic" />
+                            </feMerge>
+                        </filter>
+                    </defs>
+
+                    <!-- Main Orbit Path (Full Width S-Curve) -->
+                    <path id="orbitPath" class="orbit-path" d="M 50,250 
+                           C 200,80 350,80 500,200
+                           S 700,400 875,250
+                           S 1100,80 1200,150
+                           S 1300,300 1350,250" fill="none" stroke="url(#orbitGradient)" stroke-width="2.5"
+                        filter="url(#orbitGlow)" />
+
+                    <!-- Gradient for path -->
+                    <linearGradient id="orbitGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#00E5FF" stop-opacity="0.4" />
+                        <stop offset="50%" stop-color="#00E5FF" stop-opacity="1" />
+                        <stop offset="100%" stop-color="#007BFF" stop-opacity="0.4" />
+                    </linearGradient>
+
+                    <!-- Mission Nodes -->
+                    <g class="orbit-nodes">
+                        <circle class="orbit-node" data-node="1" cx="50" cy="250" r="10" />
+                        <circle class="orbit-node" data-node="2" cx="300" cy="100" r="10" />
+                        <circle class="orbit-node" data-node="3" cx="500" cy="200" r="10" />
+                        <circle class="orbit-node" data-node="4" cx="700" cy="350" r="10" />
+                        <circle class="orbit-node" data-node="5" cx="875" cy="250" r="10" />
+                        <circle class="orbit-node" data-node="6" cx="1050" cy="120" r="10" />
+                        <circle class="orbit-node" data-node="7" cx="1200" cy="150" r="10" />
+                        <circle class="orbit-node" data-node="8" cx="1350" cy="250" r="10" />
+                    </g>
+
+                    <!-- Traveling Energy Dot -->
+                    <circle id="energyDot" class="energy-dot" r="8" cx="50" cy="250" filter="url(#nodeGlow)" />
+                </svg>
+
+                <!-- Cards Wrapper (Positioned Overlay) -->
+                <div class="cards-wrapper">
+                    <!-- Card 1 -->
+                    <div class="timeline-card" data-card="1" style="left: 3.5%; top: 30%;">
+                        <div class="card-glow"></div>
+                        <div class="card-date">23 FEB 2026</div>
+                        <h4 class="card-title">REGISTRATION CLOSES</h4>
+                        <p class="card-time">23:59 PM — Deadline to enroll</p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="timeline-card" data-card="2" style="left: 18%; top: 40%;">
+                        <div class="card-glow"></div>
+                        <div class="card-date">25 FEB 2026</div>
+                        <h4 class="card-title">ASSEMBLY</h4>
+                        <p class="card-time">07:00 AM — Report to Venue</p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="timeline-card" data-card="3" style="left: 33%; top: 18%;">
+                        <div class="card-glow"></div>
+                        <div class="card-date">25 FEB 2026</div>
+                        <h4 class="card-title">HACKING BEGINS</h4>
+                        <p class="card-time">08:00 AM — Formalities @ 07:00</p>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="timeline-card" data-card="4" style="left: 47%; top: 85%;">
+                        <div class="card-glow"></div>
+                        <div class="card-date">25 FEB 2026</div>
+                        <h4 class="card-title">EVALUATION 1</h4>
+                        <p class="card-time">12:30 PM — First checkpoint</p>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="timeline-card" data-card="5" style="left: 60%; top: 28%;">
+                        <div class="card-glow"></div>
+                        <div class="card-date">25 FEB 2026</div>
+                        <h4 class="card-title">RECHARGE</h4>
+                        <p class="card-time">Lunch provided @13:00</p>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="timeline-card" data-card="6" style="left: 72%; top: 42%;">
+                        <div class="card-glow"></div>
+                        <div class="card-date">25 FEB 2026</div>
+                        <h4 class="card-title">CODING SPRINT</h4>
+                        <p class="card-time">Development phase</p>
+                    </div>
+
+                    <!-- Card 7 -->
+                    <div class="timeline-card" data-card="7" style="left: 83%; top: 8%;">
+                        <div class="card-glow"></div>
+                        <div class="card-date">25 FEB 2026</div>
+                        <h4 class="card-title">FINAL EVALUATION</h4>
+                        <p class="card-time">06:00 PM — System lockdown</p>
+                    </div>
+
+                    <!-- Card 8 -->
+                    <div class="timeline-card" data-card="8" style="left: 93%; top: 60%;">
+                        <div class="card-glow"></div>
+                        <div class="card-date">27 FEB 2026</div>
+                        <h4 class="card-title">RESULTS</h4>
+                        <p class="card-time">Champions announced</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         PROBLEM STATEMENTS REVEAL SECTION
+         ========================================== -->
+    <section id="problem-reveal" class="problem-reveal-section" style="padding: 80px 0;">
+        <div class="container" style="display: flex; flex-direction: column; align-items: center;">
+            <div class="reveal-box scroll-reveal" style="border: 2px solid rgba(0, 229, 255, 0.3); background: rgba(13, 17, 23, 0.5); padding: 40px; border-radius: 12px; backdrop-filter: blur(5px); max-width: 800px;">
+                <div class="reveal-header">
+                    <span class="reveal-subtitle" style="font-family: 'Sora', sans-serif; font-size: 1.1em; color: #00e5ff; text-transform: uppercase; letter-spacing: 2px;">TOP SECRET</span>
+                    <h2 class="reveal-title" style="font-family: 'Orbitron', sans-serif; font-size: 3em; color: #ffffff; margin: 10px 0; text-shadow: 0 0 15px rgba(0, 229, 255, 0.5);">Problem Statements</h2>
+                </div>
+                <div class="reveal-body" style="margin-top: 20px;">
+                    <p class="reveal-text" style="font-family: 'Inter', sans-serif; font-size: 1.2em; color: #cdd4e2; max-width: 600px; margin: 0 auto;">
+                        The official problem statements are classified until their scheduled release. Prepare for transmission.
+                    </p>
+                    <div class="reveal-date-box" style="margin-top: 30px; border-top: 1px solid rgba(0, 229, 255, 0.2); padding-top: 30px;">
+                        <span class="reveal-date-label" style="font-family: 'Sora', sans-serif; font-size: 1em; color: #ffffff; text-transform: uppercase; letter-spacing: 1px;">Release Date</span>
+                        <p class="reveal-date" style="font-family: 'Orbitron', sans-serif; font-size: 2.5em; color: #00e5ff; margin: 5px 0; font-weight: bold;">18th Feb 2026</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         PRIZE CALCULATOR SECTION
+         ========================================== -->
+    <section id="prize-calc" class="prize-calc-section">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="prize-header scroll-reveal">
+                <span class="prize-label">MISSION REWARD</span>
+                <h2 class="prize-heading">Reward Estimator</h2>
+                <p class="prize-subtitle">See your team's mission leverage</p>
+            </div>
+
+            <!-- Calculator Panel -->
+            <div class="prize-panel scroll-reveal delay-1">
+                <div class="panel-glow"></div>
+
+                <!-- Team Size Slider -->
+                <div class="calc-row slider-row">
+                    <label class="calc-label">TEAM SIZE</label>
+                    <div class="slider-container">
+                        <input type="range" id="teamSlider" class="team-slider" min="2" max="6" value="3">
+                        <div class="slider-value" id="sliderValue">3</div>
+                    </div>
+                    <span class="calc-unit">members</span>
+                </div>
+
+                <div class="calc-divider"></div>
+
+                <!-- Calculation Rows -->
+                <div class="calc-row">
+                    <span class="calc-label">Registration Fee</span>
+                    <span class="calc-value">₹200 <span class="calc-sub">/ person</span></span>
+                </div>
+
+                <div class="calc-row">
+                    <span class="calc-label">Total Investment</span>
+                    <span class="calc-value highlight" id="totalFee">₹600</span>
+                </div>
+
+                <div class="calc-row">
+                    <span class="calc-label">Prize Pool</span>
+                    <span class="calc-value prize-value">₹50,000+</span>
+                </div>
+
+                <div class="calc-divider"></div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         MISSION SECTION (Last Content Section)
+         ========================================== -->
+    <section id="mission" class="mission-section">
+        <div class="tech-grid-background"></div>
+        <div class="container">
+
+            <!-- LEFT COLUMN: Info Stack + Connector Line -->
+            <div class="mission-left-col">
+                <div class="section-label scroll-reveal">MISSION PROTOCOL</div>
+                <h2 class="section-heading scroll-reveal delay-1">Why UDBHAVATHON Exists</h2>
+
+                <div class="info-card-stack">
+                    <!-- Card 1 -->
+                    <div class="glass-info-card scroll-reveal delay-2">
+                        <div class="card-glow-border"></div>
+                        <h3 class="info-title"><span class="icon">⚡</span> WHAT IT IS</h3>
+                        <ul class="info-list">
+                            <li>State-level student hackathon competition</li>
+                            <li>Conducted by Bhavan's New Science College</li>
+                            <li>Focused on practical technology innovation</li>
+                            <li>Simulates real project and research environments</li>
+                            <li>Skill-first, execution-focused challenge</li>
+                        </ul>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="glass-info-card scroll-reveal delay-2">
+                        <div class="card-glow-border"></div>
+                        <h3 class="info-title"><span class="icon">👥</span> WHO IT IS FOR</h3>
+                        <ul class="info-list">
+                            <li>Open to student developers and builders from Intermediate 2Yr to Any UG Final Year</li>
+                            <li>Designed for interdisciplinary tech teams</li>
+                            <li>Ideal for coders, designers, and engineers</li>
+                            <li>Team-based competitive format</li>
+                            <li>For students who prefer building over theory</li>
+                        </ul>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="glass-info-card scroll-reveal delay-2">
+                        <div class="card-glow-border"></div>
+                        <h3 class="info-title"><span class="icon">🎯</span> WHAT IT TESTS</h3>
+                        <ul class="info-list">
+                            <li>Real-world problem solving ability</li>
+                            <li>Engineering and coding skills</li>
+                            <li>Speed and execution under time pressure</li>
+                            <li>Creativity and solution design</li>
+                            <li>Team collaboration and technical clarity</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Full Height Connector Line (Absolute to Left Col) -->
+                <div class="mission-connector-line">
+                    <div class="connector-gradient"></div>
+                    <div class="connector-pulse"></div>
+                </div>
+            </div>
+
+            <!-- RIGHT COLUMN: Feature Grid (2x3) -->
+            <div class="mission-right-col">
+                <div class="feature-grid">
+                    <!-- Row 1 -->
+                    <div class="feature-card tilt-card scroll-reveal delay-3">
+                        <div class="feature-glow"></div>
+                        <div class="feature-icon">🏆</div>
+                        <h4 class="feature-title">Competitive Arena</h4>
+                        <p class="feature-desc">Compete against top student teams across the state</p>
+                    </div>
+
+                    <div class="feature-card tilt-card scroll-reveal delay-3">
+                        <div class="feature-glow"></div>
+                        <div class="feature-icon">🔬</div>
+                        <h4 class="feature-title">Research Mindset</h4>
+                        <p class="feature-desc">Think beyond features — design solutions</p>
+                    </div>
+
+                    <!-- Row 2 -->
+                    <div class="feature-card tilt-card scroll-reveal delay-3">
+                        <div class="feature-glow"></div>
+                        <div class="feature-icon">🚀</div>
+                        <h4 class="feature-title">Career Accelerator</h4>
+                        <p class="feature-desc">Showcase real skills, not just resumes</p>
+                    </div>
+
+                    <div class="feature-card tilt-card scroll-reveal delay-3">
+                        <div class="feature-glow"></div>
+                        <div class="feature-icon">🌌</div>
+                        <h4 class="feature-title">Developer Mindset</h4>
+                        <p class="feature-desc">Show what wonders can be done within 10 Hours</p>
+                    </div>
+
+                    <!-- Row 3 -->
+                    <div class="feature-card tilt-card scroll-reveal delay-3">
+                        <div class="feature-glow"></div>
+                        <div class="feature-icon">🧠</div>
+                        <h4 class="feature-title">Problem Solving</h4>
+                        <p class="feature-desc">Tackle real technical challenges under pressure</p>
+                    </div>
+
+                    <div class="feature-card tilt-card scroll-reveal delay-3">
+                        <div class="feature-glow"></div>
+                        <div class="feature-icon">⚙</div>
+                        <h4 class="feature-title">Skill-Driven Build</h4>
+                        <p class="feature-desc">Hands-on engineering and rapid prototyping</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="contact-info-footer" style="text-align: center; padding: 20px; background-color: #0d1117; color: #8b949e; font-family: 'Inter', sans-serif; font-size: 0.9em; border-top: 1px solid #21262d; margin-top: 50px;">
+        <p>
+            Event Lead : Rama Krishna | Mobile Number : 8074582246 | Mail ID : pudathuramakrishna2005@gmail.com
+        </p>
+        <p>
+            Co-ordinator : Sai Manish | Mobile Number : 7569710546
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
 <html lang="en">
 
 <head>
@@ -1276,3 +1978,4 @@
 
 
 </html>
+
